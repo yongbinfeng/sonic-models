@@ -1,0 +1,43 @@
+name: "particlenet"
+platform: "onnxruntime_onnx"
+max_batch_size : 16
+input [
+  {
+    name: "pf_points"
+    data_type: TYPE_FP32
+    dims: [ 2, 100 ]
+  },
+  {
+    name: "pf_features"
+    data_type: TYPE_FP32
+    dims: [ 25, 100 ]
+  },
+  {
+    name: "pf_mask"
+    data_type: TYPE_FP32
+    dims: [ 1, 100 ]
+  },
+  {
+    name: "sv_points"
+    data_type: TYPE_FP32
+    dims: [ 2, 10 ]
+  },
+  {
+    name: "sv_features"
+    data_type: TYPE_FP32
+    dims: [ 11, 10 ]
+  },
+  {
+    name: "sv_mask"
+    data_type: TYPE_FP32
+    dims: [ 1, 10 ]
+  }
+]
+output [
+  {
+    name: "softmax"
+    data_type: TYPE_FP32
+    dims: [ 20 ]
+    label_filename: "particlenet_labels.txt"
+  }
+]
