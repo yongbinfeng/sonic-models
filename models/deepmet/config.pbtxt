@@ -1,0 +1,32 @@
+name: "deepmet"
+platform: "tensorflow_graphdef"
+max_batch_size: 1
+input [
+  {
+    name: "input"
+    data_type: TYPE_FP32
+    dims: [ 4500, 8 ]
+  },
+  {
+    name: "input_cat0"
+    data_type: TYPE_FP32
+    dims: [ 4500, 1 ]
+  },
+  {
+    name: "input_cat1"
+    data_type: TYPE_FP32
+    dims: [ 4500, 1 ]
+  },
+  {
+    name: "input_cat2"
+    data_type: TYPE_FP32
+    dims: [ 4500, 1 ]
+  }
+]
+output [
+  {
+    name: "output/BiasAdd"
+    data_type: TYPE_FP32
+    dims: [ 2 ]
+  }
+]
