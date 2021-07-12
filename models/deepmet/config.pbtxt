@@ -1,6 +1,6 @@
 name: "deepmet"
 platform: "tensorflow_graphdef"
-max_batch_size: 1
+max_batch_size: 100
 input [
   {
     name: "input"
