@@ -1,0 +1,45 @@
+name: "particlenet_AK4"
+platform: "onnxruntime_onnx"
+max_batch_size : 50
+dynamic_batching {
+}
+input [
+  {
+    name: "pf_points"
+    data_type: TYPE_FP32
+    dims: [ 2, 50 ]
+  },
+  {
+    name: "pf_features"
+    data_type: TYPE_FP32
+    dims: [ 20, 50 ]
+  },
+  {
+    name: "pf_mask"
+    data_type: TYPE_FP32
+    dims: [ 1, 50 ]
+  },
+  {
+    name: "sv_points"
+    data_type: TYPE_FP32
+    dims: [ 2, 5 ]
+  },
+  {
+    name: "sv_features"
+    data_type: TYPE_FP32
+    dims: [ 11, 5 ]
+  },
+  {
+    name: "sv_mask"
+    data_type: TYPE_FP32
+    dims: [ 1, 5 ]
+  }
+]
+output [
+  {
+    name: "softmax"
+    data_type: TYPE_FP32
+    dims: [ 8 ]
+    label_filename: "particlenet_labels.txt"
+  }
+]
