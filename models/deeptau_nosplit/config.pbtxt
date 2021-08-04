@@ -1,0 +1,47 @@
+name: "deeptau_nosplit"
+platform: "tensorflow_graphdef"
+max_batch_size: 1000
+input [
+  {
+    name: "input_tau"
+    data_type: TYPE_FP32
+    dims: [47]
+  },
+  {
+    name: "input_inner_egamma"
+    data_type: TYPE_FP32
+    dims: [ 11, 11, 86 ]
+  },
+  {
+    name: "input_inner_muon"
+    data_type: TYPE_FP32
+    dims: [ 11, 11, 64 ]
+  },
+  {
+    name: "input_inner_hadrons"
+    data_type: TYPE_FP32
+    dims: [ 11, 11, 38 ]
+  },
+  {
+    name: "input_outer_egamma"
+    data_type: TYPE_FP32
+    dims: [ 21, 21, 86 ]
+  },
+  {
+    name: "input_outer_muon"
+    data_type: TYPE_FP32
+    dims: [ 21, 21, 64 ]
+  },
+  {
+    name: "input_outer_hadrons"
+    data_type: TYPE_FP32
+    dims: [ 21, 21, 38 ]
+  }
+]
+output [
+  {
+    name: "main_output/Softmax"
+    data_type: TYPE_FP32
+    dims: [ 4 ]
+  }
+]
