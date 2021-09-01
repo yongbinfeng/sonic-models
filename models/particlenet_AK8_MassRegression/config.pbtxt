@@ -2,6 +2,7 @@ name: "particlenet_AK8_MassRegression"
 platform: "onnxruntime_onnx"
 max_batch_size : 200
 dynamic_batching {
+   preferred_batch_size: [ 200 ]
 }
 input [
   {
