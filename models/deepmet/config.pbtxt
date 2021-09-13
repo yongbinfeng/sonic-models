@@ -36,3 +36,6 @@ output [
 ]
 
 version_policy: { all { }}
+dynamic_batching {
+    preferred_batch_size: [ 8, 16 ]
+}

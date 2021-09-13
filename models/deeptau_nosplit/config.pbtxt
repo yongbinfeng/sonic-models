@@ -45,3 +45,6 @@ output [
     dims: [ 4 ]
   }
 ]
+dynamic_batching {
+    preferred_batch_size: [ 16, 32 ]
+}
