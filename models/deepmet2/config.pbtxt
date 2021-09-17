@@ -2,7 +2,7 @@
 # 1 is for the resolution tune
 # 2 is for the response tune
 
-name: "deepmet"
+name: "deepmet2"
 platform: "tensorflow_graphdef"
 max_batch_size: 100
 input [
