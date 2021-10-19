@@ -2,7 +2,8 @@ name: "particlenet_AK8_MD-2prong"
 platform: "onnxruntime_onnx"
 max_batch_size : 160
 dynamic_batching {
-   preferred_batch_size: [ 128 ]
+   #preferred_batch_size: [ 128 ]
+    max_queue_delay_microseconds : 300000
 }
 input [
   {

@@ -2,7 +2,8 @@ name: "particlenet"
 platform: "onnxruntime_onnx"
 max_batch_size : 160
 dynamic_batching {
-   preferred_batch_size: [ 80 ]
+    #preferred_batch_size: [ 80 ]
+    max_queue_delay_microseconds : 300000
 }
 input [
   {
