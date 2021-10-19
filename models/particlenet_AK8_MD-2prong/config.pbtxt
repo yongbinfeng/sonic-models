@@ -3,7 +3,7 @@ platform: "onnxruntime_onnx"
 max_batch_size : 160
 dynamic_batching {
    #preferred_batch_size: [ 128 ]
-    max_queue_delay_microseconds : 300000
+    max_queue_delay_microseconds : 100000
 }
 input [
   {

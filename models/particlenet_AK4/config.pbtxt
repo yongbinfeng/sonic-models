@@ -2,7 +2,8 @@ name: "particlenet_AK4"
 platform: "onnxruntime_onnx"
 max_batch_size : 500
 dynamic_batching {
-   preferred_batch_size: [ 200 ]
+   #preferred_batch_size: [ 200 ]
+    max_queue_delay_microseconds : 100000
 }
 input [
   {
