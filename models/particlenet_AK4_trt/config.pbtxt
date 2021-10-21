@@ -1,4 +1,4 @@
-name: "particlenet_AK4"
+name: "particlenet_AK4_trt"
 platform: "onnxruntime_onnx"
 max_batch_size : 500
 dynamic_batching {
