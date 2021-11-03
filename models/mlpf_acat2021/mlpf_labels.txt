@@ -1,0 +1,14 @@
+null
+chargedhadron
+neutralhadron
+hadronHF
+egammaHF
+gamma
+electron
+muon
+charge
+pt
+eta
+sinphi
+cosphi
+energy
